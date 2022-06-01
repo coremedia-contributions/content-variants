@@ -1,0 +1,40 @@
+type PictureVariant {
+  target: CMPicture
+  mediaQuery: String @fetch(from: "getType().getDescriptor('contentVariantName') != null ? getLink('contentVariantName')?.layout : null")
+}
+
+extend interface CMPicture {
+  pictureVariants: [PictureVariant]
+}
+
+extend type CMPictureImpl {
+  pictureVariants: [PictureVariant] @fetch(from:"@settingsAdapter.to(#root).get({'variants'})")
+}
+
+
+type VideoVariant {
+  target: CMVideo
+  mediaQuery: String @fetch(from: "getType().getDescriptor('contentVariantName') != null ? getLink('contentVariantName')?.layout : null")
+}
+
+extend interface CMVideo {
+  videoVariants: [VideoVariant]
+}
+
+extend type CMVideoImpl {
+  videoVariants: [VideoVariant] @fetch(from:"@settingsAdapter.to(#root).get({'variants'})")
+}
+
+type TeaserVariant {
+  teaserTitle: String
+  teaserText: RichText
+  mediaQuery: String @fetch(from: "getType().getDescriptor('contentVariantName') != null ? getLink('contentVariantName')?.layout : null")
+}
+
+extend interface CMTeasable {
+  teaserVariants: [TeaserVariant]
+}
+
+extend type CMTeasableImpl {
+  teaserVariants: [TeaserVariant] @fetch(from:"@settingsAdapter.to(#root).get({'variants'})")
+}

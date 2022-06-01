@@ -23,6 +23,7 @@ overlays/
 # NPM:
 /**/node/
 /**/node_modules/
+/**/dist/
 
 # Logs:
 *.log
