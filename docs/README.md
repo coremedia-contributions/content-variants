@@ -12,7 +12,7 @@ Delivery Support is currently implemented for Headless Service only
 ![Headless Support](./images/Headless.png)
 
 The Features uses annotated linklists. All you need to do is to define a custom from below forms similar to e.g. [SingleLinklistForm.ts](../apps/studio-client/apps/main/content-variants-studio-plugin/src/forms/SingleLinklistForm.ts)
-![Code](./images/Studio Code.png)
+![Code](./images/StudioCode.png)
 and activate it in [ContentVariantsStudioPlugin.ts](../apps/studio-client/apps/main/content-variants-studio-plugin/src/ContentVariantsStudioPlugin.ts)
 
 
