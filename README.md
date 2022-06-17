@@ -12,15 +12,15 @@ This extension allows you to configure and define variants using the annotated l
 
 #### Defining Picture Variants
 
-![Defining Picture Variants](docs/images/Picture Variants.png)
+![Defining Picture Variants](docs/images/PictureVariants.png)
 
 #### Defining Video Variants
 
-![Defining Video Variants](docs/images/Video Desktop.png)
+![Defining Video Variants](docs/images/VideoDesktop.png)
 
 #### Defining Text Variants
 
-![Defining Text Variants](docs/images/Text Desktop.png)
+![Defining Text Variants](docs/images/TextDesktop.png)
 
 
 In this extension this is all happening within the same document.
