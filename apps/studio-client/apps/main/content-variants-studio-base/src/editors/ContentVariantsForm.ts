@@ -26,7 +26,6 @@ import ContentVariantsTypeSuggester from "./ContentVariantsTypeSuggester";
 interface ContentVariantsFormConfig extends Config<PropertyFieldGroup>, Partial<Pick<ContentVariantsForm,
         "rowWidgetItems" |
         "propertyName" |
-        "titleSuffix" |
         "linkType">> {
 }
 
@@ -53,10 +52,8 @@ class ContentVariantsForm extends PropertyFieldGroup {
 
       items: [
         Config(LinkListPropertyField, {
-          propertyName: ConfigUtils.asString(config.propertyName || ContentVariantsForm.CONTENT_VARIANTS_PROPERTY_NAME),
           showThumbnails: true,
           hideLabel: true,
-          bindTo: config.bindTo,
           linkListWrapper: this.#getStructContentLinkListWrapper(config),
           linkType: ConfigUtils.asString(config.linkType || ContentVariantsForm.DEFAULT_LINK_TYPE),
           linkSuggester: new ContentVariantsTypeSuggester({ linkTypeName: "CMViewtype" }),
@@ -107,8 +104,6 @@ class ContentVariantsForm extends PropertyFieldGroup {
 
   /* The allowed type of links - default to "CMTeasable" */
   linkType: string = null;
-
-  titleSuffix: string = null;
 }
 
 export default ContentVariantsForm;
