@@ -1,12 +1,9 @@
-import TeaserOverlayConstants from "@coremedia-blueprint/studio-client.main.blueprint-forms/TeaserOverlayConstants";
-import TeaserOverlayPropertyField
-  from "@coremedia/studio-client.main.ckeditor4-components/fields/TeaserOverlayPropertyField";
+import RichTextPropertyField from "@coremedia/studio-client.main.ckeditor4-components/fields/RichTextPropertyField";
 import PropertyFieldGroup from "@coremedia/studio-client.main.editor-components/sdk/premular/PropertyFieldGroup";
 import StringPropertyField
   from "@coremedia/studio-client.main.editor-components/sdk/premular/fields/StringPropertyField";
 import StringPropertyFieldDelegatePlugin
   from "@coremedia/studio-client.main.editor-components/sdk/premular/fields/plugins/StringPropertyFieldDelegatePlugin";
-import ShowIssuesPlugin from "@coremedia/studio-client.main.editor-components/sdk/validation/ShowIssuesPlugin";
 import Config from "@jangaroo/runtime/Config";
 import ConfigUtils from "@jangaroo/runtime/ConfigUtils";
 
@@ -42,23 +39,10 @@ class TeaserForm extends PropertyFieldGroup {
             ],
           }),
         }),
-        Config(TeaserOverlayPropertyField, {
-          propertyName: config.propertyName + ".teaserText",
-          delegatePropertyName: "teaserText",
-          initialHeight: 100,
+        Config(RichTextPropertyField, {
           itemId: "teaserText",
-          settingsPath: TeaserOverlayConstants.DEFAULT_SETTINGS_PATH,
-          styleDescriptorFolderPaths: TeaserOverlayConstants.DEFAULT_STYLE_DESCRIPTOR_FOLDER_PATHS,
-          ...ConfigUtils.append({
-            plugins: [
-              Config(ShowIssuesPlugin, {
-                bindTo: config.bindTo,
-                propertyName: config.propertyName + ".teaserText",
-                statefulSubComponentsFunction: (): Array<any> =>
-                  [this.queryById(TeaserOverlayPropertyField.TEASER_OVERLAY_RICHTEXT_ITEM_ID)],
-              }),
-            ],
-          }),
+          propertyName: config.propertyName + ".teaserText",
+          initialHeight: 100,
         }),
       ],
 
