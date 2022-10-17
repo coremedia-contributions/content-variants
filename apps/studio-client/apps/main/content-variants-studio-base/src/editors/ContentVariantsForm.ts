@@ -52,6 +52,7 @@ class ContentVariantsForm extends PropertyFieldGroup {
 
       items: [
         Config(LinkListPropertyField, {
+          propertyFieldName: "contentVariantsLinkList",
           showThumbnails: true,
           hideLabel: true,
           linkListWrapper: this.#getStructContentLinkListWrapper(config),
