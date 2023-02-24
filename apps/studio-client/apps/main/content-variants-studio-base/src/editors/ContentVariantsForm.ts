@@ -58,13 +58,6 @@ class ContentVariantsForm extends PropertyFieldGroup {
           linkListWrapper: this.#getStructContentLinkListWrapper(config),
           linkType: ConfigUtils.asString(config.linkType || ContentVariantsForm.DEFAULT_LINK_TYPE),
           linkSuggester: new ContentVariantsTypeSuggester({ linkTypeName: "CMViewtype" }),
-          additionalToolbarItems: [
-            Config(Separator),
-            Config(QuickCreateLinklistMenu, {
-              bindTo: config.bindTo,
-              sourceLinkListVE: this.#getStructContentLinkListWrapper(config).getVE(),
-            }),
-          ],
           columns: [
             Config(LinkListThumbnailColumn),
             Config(TypeIconColumn),
