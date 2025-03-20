@@ -1,6 +1,6 @@
 
-import CMPictureForm from "@coremedia-blueprint/studio-client.main.blueprint-forms/forms/CMPictureForm";
-import CMVideoForm from "@coremedia-blueprint/studio-client.main.blueprint-forms/forms/CMVideoForm";
+import CMPictureForm from "@coremedia-blueprint/studio-client.main.blueprint-forms/custom/CMPictureForm";
+import CMVideoForm from "@coremedia-blueprint/studio-client.main.blueprint-forms/custom/CMVideoForm";
 import TeaserDocumentForm
   from "@coremedia-blueprint/studio-client.main.blueprint-forms/forms/containers/TeaserDocumentForm";
 import ContentVariantsForm from "@coremedia-labs/studio-client.ext.content-variants-studio-client/editors/ContentVariantsForm";
