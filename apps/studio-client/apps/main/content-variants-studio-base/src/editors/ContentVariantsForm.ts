@@ -22,6 +22,8 @@ import Config from "@jangaroo/runtime/Config";
 import ConfigUtils from "@jangaroo/runtime/ConfigUtils";
 import ContentVariants_properties from "../ContentVariants_properties";
 import ContentVariantsTypeSuggester from "./ContentVariantsTypeSuggester";
+import LinkListThumbnailWithTypeColumn
+  from "@coremedia/studio-client.ext.content-link-list-components/columns/LinkListThumbnailWithTypeColumn";
 
 interface ContentVariantsFormConfig extends Config<PropertyFieldGroup>, Partial<Pick<ContentVariantsForm,
         "rowWidgetItems" |
@@ -59,8 +61,7 @@ class ContentVariantsForm extends PropertyFieldGroup {
           linkType: ConfigUtils.asString(config.linkType || ContentVariantsForm.DEFAULT_LINK_TYPE),
           linkSuggester: new ContentVariantsTypeSuggester({ linkTypeName: "CMViewtype" }),
           columns: [
-            Config(LinkListThumbnailColumn),
-            Config(TypeIconColumn),
+            Config(LinkListThumbnailWithTypeColumn),
             Config(NameColumn, { flex: 1 }),
             Config(StatusColumn),
           ],
