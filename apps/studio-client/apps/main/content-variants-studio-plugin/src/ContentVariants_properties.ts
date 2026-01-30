@@ -1,10 +1,10 @@
+import BlueprintDoctypesDocTypes_properties
+  from "@coremedia-blueprint/studio-client.blueprint-doctypes/dist/src/BlueprintDoctypesDocTypes_properties";
+
 /**
  * Interface values for ResourceBundle "ContentVariants".
  * @see ContentVariants_properties#INSTANCE
  */
-import BlueprintDocumentTypes_properties
-  from "@coremedia-blueprint/studio-client.main.blueprint-forms/BlueprintDocumentTypes_properties";
-
 interface ContentVariants_properties {
   "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserText_text": string;
   "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserText_emptyText": string;
@@ -22,10 +22,10 @@ interface ContentVariants_properties {
  * @see ContentVariants_properties
  */
 const ContentVariants_properties: ContentVariants_properties = {
-  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserTitle_text": BlueprintDocumentTypes_properties.CMTeasable_teaserTitle_text,
-  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserTitle_emptyText": BlueprintDocumentTypes_properties.CMTeasable_teaserTitle_emptyText,
-  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserText_text": BlueprintDocumentTypes_properties.CMTeasable_teaserText_text,
-  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserText_emptyText": BlueprintDocumentTypes_properties.CMTeasable_teaserText_emptyText,
+  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserTitle_text": BlueprintDoctypesDocTypes_properties.CMTeasable_teaserTitle_displayName,
+  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserTitle_emptyText": BlueprintDoctypesDocTypes_properties.CMTeasable_teaserTitle_emptyText,
+  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserText_text": BlueprintDoctypesDocTypes_properties.CMTeasable_teaserText_displayName,
+  "CMTeasable_localSettings.variants.{index:[0-9]+}.teaserText_emptyText": BlueprintDoctypesDocTypes_properties.CMTeasable_teaserText_emptyText,
   TeaserVariantsTitle: "Teaser Variants",
   PictureVariantsTitle: "Picture Variants",
   VideoVariantsTitle: "Video Variants",
