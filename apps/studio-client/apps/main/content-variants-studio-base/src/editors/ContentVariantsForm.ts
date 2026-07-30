@@ -3,9 +3,6 @@ import StructContentLinkListWrapper
 
 import NameColumn from "@coremedia/studio-client.ext.cap-base-components/columns/NameColumn";
 import StatusColumn from "@coremedia/studio-client.ext.cap-base-components/columns/StatusColumn";
-import TypeIconColumn from "@coremedia/studio-client.ext.cap-base-components/columns/TypeIconColumn";
-import LinkListThumbnailColumn
-  from "@coremedia/studio-client.ext.content-link-list-components/columns/LinkListThumbnailColumn";
 import ILinkListWrapper from "@coremedia/studio-client.link-list-models/ILinkListWrapper";
 import PropertyFieldAnnotatedLinkListWidget
   from "@coremedia/studio-client.main.editor-components/sdk/premular/PropertyFieldAnnotatedLinkListWidget";
@@ -22,8 +19,7 @@ import Config from "@jangaroo/runtime/Config";
 import ConfigUtils from "@jangaroo/runtime/ConfigUtils";
 import ContentVariants_properties from "../ContentVariants_properties";
 import ContentVariantsTypeSuggester from "./ContentVariantsTypeSuggester";
-import LinkListThumbnailWithTypeColumn
-  from "@coremedia/studio-client.ext.content-link-list-components/columns/LinkListThumbnailWithTypeColumn";
+import LinkListThumbnailWithTypeColumn from "@coremedia/studio-client.ext.content-link-list-components/columns/LinkListThumbnailWithTypeColumn";
 
 interface ContentVariantsFormConfig extends Config<PropertyFieldGroup>, Partial<Pick<ContentVariantsForm,
         "rowWidgetItems" |
